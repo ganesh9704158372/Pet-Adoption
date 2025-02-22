@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Categories Page</title> 
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <script defer src="https://use.fontawesome.com/releases/v5.1.0/js/all.js" integrity="sha384-3LK/3kTpDE/Pkp8gTNp2gR/2gOiwQ6QaO7Td0zV76UFJVhqLl4Vl3KL1We6q6wR9" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous" />
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="{{url_for('static', filename='css/categories.css')}}">
+
+</head>
+<body> 
+    <header>
+        Categories
+    </header> 
+    <div class="bg">
+        <div>
+            <button class="button3 m-4">
+                <a href="{{url_for('view_pets')}}">New Added</a>
+            </button>
+        </div>
+    
+    <div class="explore-menu-section pb-5"></div>
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <h1 class="pet-section-heading"></h1>
+                </div>
+                <div class="col-12 col-md-6 col-lg-4">
+                    <div class="shadow pet-item-card mb-3">
+                        <img src="{{url_for('static',filename='images/rabbit.avif')}}" class="pet-item-image w-100" />
+                        <h1 class="pet-card-title text-center">Rabbit</h1>
+                        <p>
+                         NAME : Rabbiko
+                        </p>
+                        <P>AGE : 3 Months</P>
+                        <p>GENDER : Male</p>
+                        <div class="button">
+                            <a href="{{url_for('adoptform')}}" class="btn btn-primary stretched-link">Adopt</a>
+                         </div>
+
+                    </div>
+                </div>
+                <div class="col-12 col-md-6 col-lg-4">
+                    <div class="shadow pet-item-card mb-3"> 
+                        <img src="{{url_for('static',filename='images/bird.jpg')}}" class="pet-item-image w-100" />
+                        <h1 class="pet-card-title text-center">Bird</h1>
+                        <p>
+                        NAME : Crackle
+                        </p>
+                        <p>AGE : 6 Months</p>
+                        <p>Gender : Female</p>
+                        <div class="button">
+                            <a href="{{url_for('adoptform')}}" class="btn btn-primary stretched-link">Adopt</a>
+                     </div>
+
+                    </div>
+                </div>
+                <div class="col-12 col-md-6 col-lg-4">
+                    <div class="pet-item-card shadow mb-3">
+                        <img src="{{url_for('static',filename='images/dog.avif')}}" class="pet-item-image w-100" />
+                        <h1 class="pet-card-title text-center">Dog</h1>
+                        <p>
+                            NAME : Charlie
+                        </p>
+                        <p>AGE : 9 Months</p>
+                        <p>GENDER : Male</p>
+                        <div class="button">
+                            <a href="{{url_for('adoptform')}}" class="btn btn-primary stretched-link">Adopt</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-md-6 col-lg-4">
+                    <div class="pet-item-card shadow mb-3">
+                        <img src="{{url_for('static',filename='images/dog.avif')}}" class="pet-item-image w-100" />
+                        <h1 class="pet-card-title text-center">Cat</h1>
+                        <p>
+                            NAME : Daisy
+                        </p>
+                        <p>AGE : 4 Months</p>
+                        <p>GENDER : Male</p>
+                        <div class="button">
+                            <a href="{{url_for('adoptform')}}" class="btn btn-primary stretched-link">Adopt</a>
+    </div>
+                    </div>
+                </div>
+                <div class="col-12 col-md-6 col-lg-4">
+                    <div class="pet-item-card shadow mb-3">
+                        <img src="{{url_for('static',filename='images/rabbit2.jpg')}}" class="pet-item-image w-100" />
+                        <h1 class="pet-card-title text-center">Rabbit</h1>
+                        <p>
+                            NAME : Toffee
+                        </p>
+                        <p>AGE : 2 Months</p>
+                        <p>GENDER : Female</p>
+                        <div class="button">
+                            <a href="{{url_for('adoptform')}}" class="btn btn-primary stretched-link">Adopt</a>
+    </div>
+                    </div>
+                </div>
+                <div class="col-12 col-md-6 col-lg-4">
+                    <div class="pet-item-card shadow mb-3">
+                        <img src="{{url_for('static',filename='images/bird2.jpg')}}" class="menu-item-image w-100" />
+                        <h1 class="pet-card-title text-center">Bird</h1>
+                        <p>
+                        NAME : Pepper
+                        </p>
+                        <p>AGE : 2 Months</p>
+                        <p>GENDER : Male</p>
+                        <div class="button">
+                            <a href="{{url_for('adoptform')}}" class="btn btn-primary stretched-link">Adopt</a>
+    </div>
+                    </div>
+                </div>
+                <div class="col-12 col-md-6 col-lg-4">
+                    <div class="pet-item-card shadow mb-3">
+                        <img src="{{url_for('static',filename='images/cat2.jpg')}}" class="pet-item-image w-100" />
+                        <h1 class="pet-card-title text-center">Cat</h1>
+                        <p>
+                            NAME : Milo
+                        </p>
+                        <p>AGE : 8 Months</p>
+                        <p>GENDER : Male</p>
+                        <div class="button">
+                            <a href="{{url_for('adoptform')}}" class="btn btn-primary stretched-link">Adopt</a>
+    </div>
+                    </div>
+                </div>
+                <div class="col-12 col-md-6 col-lg-4">
+                    <div class="pet-item-card shadow mb-3">
+                        <img src="{{url_for('static',filename='images/rabbit3.jpg')}}" class="pet-item-image w-100" />
+                        <h1 class="pet-card-title text-center">Rabbit</h1>
+                        <p>
+                            NAME : Evie
+                        </p>
+                        <p>AGE : 5 Months</p>
+                        <p>GENDER : Male</p>
+                        <div class="button">
+                            <a href="{{url_for('adoptform')}}" class="btn btn-primary stretched-link">Adopt</a>
+    </div>
+                    </div>
+                </div>
+                <div class="col-12 col-md-6 col-lg-4">
+                    <div class="shadow pet-item-card mb-3">
+                        <img src="{{url_for('static',filename='images/bird3.webp')}} " class="pet-item-image w-100" />
+                        <h1 class="pet-card-title text-center">Bird</h1>
+                        <p>NAME : Coco </p>
+                        <p>AGE : 7 Months</p>
+                        <p>GENDER : Male</p>
+                    <div class="button">
+                        <a href="{{url_for('adoptform')}}" class="btn btn-primary stretched-link">Adopt</a>
+                    </div>
+                    </div>
+                </div>
+                <div class="col-12 col-md-6 col-lg-4">
+                    <div class="shadow pet-item-card mb-3">
+                        <img src="{{url_for('static',filename='images/dog2.jpg')}}" class="pet-item-image w-100" />
+                        <h1 class="pet-card-title text-center">Dog</h1>
+                        <p>
+                        NAME : Max
+                        </p>
+                        <p>AGE : 3 Months</p>
+                        <p>GENDER : Male</p>
+                        <div class="button">
+                            <a href="{{url_for('adoptform')}}" class="btn btn-primary stretched-link">Adopt</a>
+    </div>
+                    </div>
+                </div>
+                <div class="col-12 col-md-6 col-lg-4">
+                    <div class="pet-item-card shadow mb-3">
+                        <img src="{{url_for('static',filename='images/bird4.jpg')}}" class="pet-item-image w-100" />
+                        <h1 class="pet-card-title text-center">Bird</h1>
+                        <p> NAME : Kiki </p>
+                        <p>AGE : 2 Months</p>
+                        <p>GENDER : Male</p>
+                        <div class="button">
+                            <a href="{{url_for('adoptform')}}" class="btn btn-primary stretched-link">Adopt</a>
+    </div>
+                    </div>
+                </div>
+                <div class="col-12 col-md-6 col-lg-4">
+                    <div class="shadow pet-item-card mb-3">
+                        <img src="{{url_for('static',filename='images/cat3.jpg')}}" class="pet-item-image w-100" />
+
+                        <h1 class="pet-card-title text-center">Cat</h1>
+                        <p>
+                            NAME : Simbha 
+                        </p>
+                        <p>AGE : 4 Months</p>
+                        <p>GENDER : Female</p>
+
+                        <div class="button">
+                            <a href="{{url_for('adoptform')}}" class="btn btn-primary stretched-link">Adopt</a>
+    </div>
+                    </div>
+                </div>
+                <div class="col-12 col-md-6 col-lg-4">
+                    <div class="shadow pet-item-card mb-3">
+                        <img src="{{url_for('static',filename='images/dog3.jpg')}}" class="pet-item-image w-100" />
+
+                        <h1 class="pet-card-title text-center">Dog</h1>
+                        <p>
+                            NAME : Leo 
+                        </p>
+                        <p>AGE : 5 Months</p>
+                        <p>GENDER : Female</p>
+                        <div class="button">
+                            <a href="{{url_for('adoptform')}}" class="btn btn-primary stretched-link">Adopt</a>
+    </div>
+                    </div>
+                </div>
+                <div class="col-12 col-md-6 col-lg-4">
+                    <div class="pet-item-card shadow mb-3">
+                        <img src="{{url_for('static',filename='images/bird5.jpg')}}" class="pet-item-image w-100" />
+                        <h1 class="pet-card-title text-center">Bird</h1>
+                        <p>NAME : Skye </p>
+                        <p>AGE : 9 Months</p>
+                        <p>GENDER : Male</p>
+                        <div class="button">
+                            <a href="{{url_for('adoptform')}}" class="btn btn-primary stretched-link">Adopt</a>
+    </div>
+                    </div>
+                </div>
+                <div class="col-12 col-md-6 col-lg-4">
+                    <div class="shadow pet-item-card mb-3">
+                        <img src="{{url_for('static',filename='images/cat4.jpg')}}" class="pet-item-image w-100" />
+                        <h1 class="pet-card-title text-center">Cat</h1>
+                        <p> NAME : Browny </p>
+                        <p> AGE : 3 Months</p>
+                        <p>GENDER : Male</p>
+                        <div class="button">
+                            <a href="{{url_for('adoptform')}}" class="btn btn-primary stretched-link">Adopt</a>
+    </div>
+                    </div>
+                </div>
+               
+            </div>
+        </div>
+    </div>
+    <button class="button2 m-4">
+        <a href="home.html">Back</a>
+    </button>
+</div>
+
+</body>
+</html>

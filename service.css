@@ -1,0 +1,75 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: "Nunito", sans-serif;
+}
+.btn {
+    background-color: black;
+}
+.theme-text {
+    color: #474af0;
+}
+
+.card-img-top {
+    height: 200px;
+    width: 100%;
+}
+
+.card {
+    z-index: 1;
+    overflow: hidden;
+    transition: 0.5s;
+}
+body{
+    background-image: url("data:image/svg+xml,%3Csvg%20id%3D%22visual%22%20viewBox%3D%220%200%20900%20600%22%20width%3D%22900%22%20height%3D%22600%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20xmlns%3Axlink%3D%22http%3A%2F%2Fwww.w3.org%2F1999%2Fxlink%22%20version%3D%221.1%22%3E%3Crect%20x%3D%220%22%20y%3D%220%22%20width%3D%22900%22%20height%3D%22600%22%20fill%3D%22%23FFCC01%22%3E%3C%2Frect%3E%3Cpath%20d%3D%22M689%200L649.7%2033.3C610.3%2066.7%20531.7%20133.3%20478.8%20200C426%20266.7%20399%20333.3%20406.8%20400C414.7%20466.7%20457.3%20533.3%20478.7%20566.7L500%20600L0%20600L0%20566.7C0%20533.3%200%20466.7%200%20400C0%20333.3%200%20266.7%200%20200C0%20133.3%200%2066.7%200%2033.3L0%200Z%22%20fill%3D%22%2302c6d8%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22miter%22%3E%3C%2Fpath%3E%3C%2Fsvg%3E");
+  height:100vh;
+background-size:cover;
+}
+
+
+
+.container-fluid {
+    background-position: center;
+    background-size: cover;
+}
+
+.button {
+    font-size: 18px;
+    color: #fff;
+    width: 100%;
+    border-radius: 30px;
+background-color: black;
+    border: none;
+    border-top-right-radius: 0px;
+    padding: 14px 15px;
+    font-weight: 600;
+    transition: 500ms ease;
+}
+
+.button:hover {
+    border-top-right-radius: 30px;
+}
+
+.button2 {
+    font-size: 18px;
+    color:white;
+    width: 10%;
+    border-radius: 30px;
+background-color: black;
+    border: none;
+    border-top-right-radius: 0px;
+    padding: 14px 15px;
+    font-weight: 600;
+    transition: 500ms ease;
+}
+
+.button2:hover {
+    border-top-right-radius: 30px;
+}
+
+p {
+    font-size: 42px;
+    font-weight: bold;
+    font-family: italic;
+}

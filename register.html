@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register Page</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/register.css') }}">
+</head>
+
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    body {
+        font-family: Arial, sans-serif;
+        background-color: #f4f4f4;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+    }
+
+    .register-container {
+        width: 100%;
+        max-width: 400px;
+        padding: 20px;
+        background-color: #fff;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        border-radius: 8px;
+    }
+
+    .register-box h2 {
+        text-align: center;
+        margin-bottom: 20px;
+    }
+
+    .input-group {
+        margin-bottom: 15px;
+    }
+
+    .input-group label {
+        display: block;
+        margin-bottom: 5px;
+        font-weight: bold;
+    }
+
+    .form-control {
+        width: 100%;
+        padding: 10px;
+        font-size: 16px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+    }
+
+    .btn-primary {
+        width: 100%;
+        padding: 10px;
+        background-color: #007bff;
+        border: none;
+        color: white;
+        cursor: pointer;
+        border-radius: 4px;
+        font-size: 16px;
+    }
+
+    .btn-primary:hover {
+        background-color: #0056b3;
+    }
+
+    .error-message {
+        color: red;
+        font-size: 14px;
+        margin-top: -10px;
+        margin-bottom: 10px;
+    }
+
+    p {
+        text-align: center;
+    }
+
+    a {
+        color: #007bff;
+        text-decoration: none;
+    }
+
+    a:hover {
+        text-decoration: underline;
+    }
+</style>
+
+
+<body>
+    <div class="register-container">
+        <div class="register-box">
+            <h2>Register</h2>
+            <form method="post">
+                {{ form.hidden_tag() }}
+                <div class="input-group">
+                    {{ form.name.label }}
+                    {{ form.name(class="form-control", placeholder="Enter your full name") }}
+                </div>
+                <div class="input-group">
+                    {{ form.email.label }}
+                    {{ form.email(class="form-control", placeholder="Enter your email") }}
+                </div>
+                <div class="input-group">
+                    {{ form.password.label }}
+                    {{ form.password(class="form-control", placeholder="Enter your password") }}
+                </div>
+                <div class="input-group">
+                    {{ form.confirm_password.label }}
+                    {{ form.confirm_password(class="form-control", placeholder="Confirm your password") }}
+                </div>
+                <div class="input-group">
+                    {{ form.submit(class="btn btn-primary") }}
+                </div>
+                <p>Already have an account? <a href="{{ url_for('login') }}">Login here</a></p>
+            </form>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const form = document.querySelector('form');
+            const nameField = form.querySelector('input[name="name"]');
+            const emailField = form.querySelector('input[name="email"]');
+            const passwordField = form.querySelector('input[name="password"]');
+            const confirmPasswordField = form.querySelector('input[name="confirm_password"]');
+            
+            const emailPattern = /^[^ ]+@[^ ]+\.[a-z]{2,3}$/;
+    
+            form.addEventListener('submit', function(event) {
+                let valid = true;
+    
+                // Clear previous error messages
+                document.querySelectorAll('.error-message').forEach(el => el.remove());
+    
+                // Name validation
+                if (nameField.value.trim() === "") {
+                    displayError(nameField, "Name is required");
+                    valid = false;
+                }
+    
+                // Email validation
+                if (!emailField.value.match(emailPattern)) {
+                    displayError(emailField, "Invalid email format");
+                    valid = false;
+                }
+    
+                // Password validation
+                if (passwordField.value.length < 6) {
+                    displayError(passwordField, "Password must be at least 6 characters long");
+                    valid = false;
+                }
+    
+                // Confirm Password validation
+                if (confirmPasswordField.value !== passwordField.value) {
+                    displayError(confirmPasswordField, "Passwords do not match");
+                    valid = false;
+                }
+    
+                // If form is not valid, prevent submission
+                if (!valid) {
+                    event.preventDefault();
+                }
+            });
+    
+            function displayError(input, message) {
+                const errorElement = document.createElement('div');
+                errorElement.className = 'error-message';
+                errorElement.textContent = message;
+                input.parentElement.appendChild(errorElement);
+            }
+        });
+    </script>
+    
+</body>
+</html>

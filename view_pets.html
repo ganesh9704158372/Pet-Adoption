@@ -1,0 +1,156 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>View Pets</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            font-family: "Poppins", sans-serif;
+    background-image: url("data:image/svg+xml,%3Csvg%20id%3D%22visual%22%20viewBox%3D%220%200%20900%20600%22%20width%3D%22900%22%20height%3D%22600%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20xmlns%3Axlink%3D%22http%3A%2F%2Fwww.w3.org%2F1999%2Fxlink%22%20version%3D%221.1%22%3E%3Crect%20x%3D%220%22%20y%3D%220%22%20width%3D%22900%22%20height%3D%22600%22%20fill%3D%22%23FFCC01%22%3E%3C%2Frect%3E%3Cpath%20d%3D%22M689%200L649.7%2033.3C610.3%2066.7%20531.7%20133.3%20478.8%20200C426%20266.7%20399%20333.3%20406.8%20400C414.7%20466.7%20457.3%20533.3%20478.7%20566.7L500%20600L0%20600L0%20566.7C0%20533.3%200%20466.7%200%20400C0%20333.3%200%20266.7%200%20200C0%20133.3%200%2066.7%200%2033.3L0%200Z%22%20fill%3D%22%2302c6d8%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22miter%22%3E%3C%2Fpath%3E%3C%2Fsvg%3E");
+    height:100vh;
+  background-size:cover;
+        }
+
+        h1 {
+            text-align: center;
+            margin-top: 20px;
+            background-color:black;
+padding:15px;
+            height:18vh
+            font-size: 32px;
+            font-family: 'Bree Serif', serif;
+            color: white;
+        }
+
+        a {
+            color: white;
+            text-decoration: none; 
+            font-family: bree serif;
+            font-size:22px;
+            padding:5px;
+            border-radius: 10px;
+            
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        .container {
+            width: 90%;
+            margin: 0 auto;
+            overflow: hidden;
+        }
+
+        .add-pet-link {
+            display: block;
+            margin-bottom: 20px;
+            text-align: right;
+        
+        }
+
+        .pet-list {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            list-style-type: none;
+            padding: 0;
+        }
+
+        .pet-list li {
+            background: #fff;
+            margin-bottom: 20px;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            width: 22%; /* Adjust width for 4 items per row */
+            box-sizing: border-box;
+        }
+
+        .pet-list li h2 {
+            font-size: 24px;
+            margin-bottom: 10px;
+        }
+
+        .pet-details {
+            margin-bottom: 10px;
+            font-size: 25px;
+            font-family:bree serif;
+        }
+
+        .pet-list img {
+            max-width: 100%;
+            height: 40vh;
+            border-radius: 32px;
+            margin-bottom: 10px;
+        }
+
+        .actions {
+            margin: 10px;
+            background-color: #bb0000;
+            height:45px;
+            width:100px;
+            color:white;
+            padding-top:8px;
+            text-align: center;
+            border-radius: 10px;
+            
+        }
+
+        .actions2 {
+            margin: 10px;
+            background-color: black;
+            height:45px;
+            width:100px;
+            color:white;
+            padding-top:8px;
+            text-align: center;
+            border-radius: 10px;
+            
+        }
+
+        @media screen and (max-width: 768px) {
+            .pet-list li {
+                width: 48%; /* Adjust for smaller screens */
+            }
+        }
+
+        @media screen and (max-width: 480px) {
+            .pet-list li {
+                width: 100%; /* Stack items for mobile */
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>View Pets</h1>
+        <div class="add-pet-link">
+            <a href="{{ url_for('addpet') }}">Add New Pet</a>
+        </div>
+        <ul class="pet-list">
+            {% for pet in pets %}
+            <li>
+                <h2>{{ pet['name'] }}</h2>
+                <div class="pet-details">Age: {{ pet['age'] }}</div>
+                <div class="pet-details">Email: {{ pet['email'] }}</div>
+                <div class="pet-details">Contact: {{ pet['contact'] }}</div>
+                <div class="pet-details">Type: {{ pet['type'] }}</div>
+                {% if pet['image'] %}
+                <img src="{{ pet['image'] }}" alt="Pet Image">
+                {% endif %}
+                <div class="actions">
+                    <a href="{{ url_for('edit_pet', pet_id=pet['_id']) }}">Edit</a>
+                </div>
+                <div class="actions2">
+                    <a href="{{ url_for('delete_pet', pet_id=pet['_id']) }}" onclick="return confirm('Are you sure?')">Delete</a>
+                </div>
+            </li>
+            {% endfor %}
+        </ul>
+    </div>
+</body>
+</html>

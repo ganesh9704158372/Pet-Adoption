@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Register Page</title> 
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <script defer src="https://use.fontawesome.com/releases/v5.1.0/js/all.js" integrity="sha384-3LK/3kTpDE/Pkp8gTNp2gR/2gOiwQ6QaO7Td0zV76UFJVhqLl4Vl3KL1We6q6wR9" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous" />
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="{{url_for('static', filename='css/home.css')}}">
+
+  </head>
+<body>
+<nav>
+    <div class="nav__header">
+      <div class="nav__logo">
+              <i class="fa-solid fa-paw fa-bounce"></i>
+        <a href="#">
+          <i class="fa-solid fa-paw fa-bounce"></i>
+          Pet<span>World</span></a>
+      </div>
+      <div class="nav__menu__btn" id="menu-btn">
+        <span><i class="ri-menu-line"></i></span>
+      </div>
+    </div>
+    <ul class="nav__links" id="nav-links">
+      <li><a href="{{url_for('home')}}">Home</a></li>
+      <li><a href="{{url_for('categories')}}">categories</a></li>
+      <li><a href="{{url_for('service')}}">Services</a></li>
+      <li><a href="{{url_for('about')}}">About Us</a></li>
+      <button class="btn"><a href="{{url_for('addpet')}}" class="link">Add Pet</a></button>
+    </ul>
+  </nav>
+  <header class="header__container">
+    <div class="header__image">
+        <img src="{{url_for('static',filename='images/bg.webp')}}" class="image"> 
+    </div>
+    <div class="header__content"> 
+      <h1><br />Forever<span> Homes</span> for Furbabies</h1>
+      <p>
+        Animal adoption is the procedure through which a human takes in an animal, most often a cat or a dog.
+         Animal control takes these lost or abandoned animals and places them in animal shelters
+      </p>
+    </div>
+  </header> 
+  </body>
+  </html>

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Register Page</title> 
+    <link rel="stylesheet" href="{{url_for('static', filename='css/service.css')}}">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <script defer src="https://use.fontawesome.com/releases/v5.1.0/js/all.js" integrity="sha384-3LK/3kTpDE/Pkp8gTNp2gR/2gOiwQ6QaO7Td0zV76UFJVhqLl4Vl3KL1We6q6wR9" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous" />
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+</head> 
+<body>
+    <div class="container-fluid">
+        <h1 class="text-center mt-5 display-3 fw-bold">Our <span class="theme-text">Services</span></h1>
+        <hr class="mx-auto mb-5 w-25">
+        <div class="row mb-5">
+            <div class="col-12 col-sm-6 col-md-3 m-auto">
+                <div class="card shadow">
+                    <img src="{{url_for('static',filename='images/service.avif')}} " alt="" class="card-img-top">
+                    <div class="card-body">
+                        <h3 class="text-center">Do's and Don'ts after bringing Home a newly Adopted pet!</h3>
+                        <hr class="mx-auto w-75">
+                        <p>     
+                            <iframe width="560" height="315" src="https://www.youtube.com/embed/gcUHp8Wm7D0?si=axSyZ9l-4qyoGIXD" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-sm-6 col-md-3 m-auto">
+                <div class="card shadow">
+                    <img src="{{url_for('static',filename='images/service.avif')}}" alt="" class="card-img-top">
+
+                    <div class="card-body">
+                        <h3 class="text-center">
+                            How to take care of <br>
+                            your new pet
+                        </h3>
+                        <hr class="mx-auto w-75">
+                        <p>
+                            <iframe width="560" height="315" src="https://www.youtube.com/embed/gcUHp8Wm7D0?si=axSyZ9l-4qyoGIXD" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe> 
+                        <br>
+                        </p>
+                    </div>
+
+                </div>
+            </div>
+            <div class="col-12 col-sm-6 col-md-3 m-auto">
+                <div class="card shadow">
+                    <img src="{{url_for('static',filename='images/service.avif')}}" alt="" class="card-img-top">
+
+                    <div class="card-body">
+                        <h3 class="text-center">
+                            How to Ensure your Newly adopted Pet is Eating Right?
+                        </h3>
+                        <hr class="mx-auto w-75">
+                        <p>
+                            <iframe width="560" height="315" src="https://www.youtube.com/embed/gcUHp8Wm7D0?si=axSyZ9l-4qyoGIXD" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>  
+                    </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <button class="button2 m-4">
+            <a href="{{url_for('home')}}">Back</a>
+        </button>
+    </div>
+</body> 
+</html>

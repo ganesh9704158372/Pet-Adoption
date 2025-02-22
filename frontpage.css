@@ -1,0 +1,86 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+/* Body and layout */
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background-color: #f5f5f5;
+    background-image: url("https://res.cloudinary.com/dwnukw4ah/image/upload/v1726235218/WhatsApp_Image_2024-09-13_at_15.04.44_iitowd.jpg");
+    height:100vh;
+  background-size:cover; 
+  text-align: center;
+  margin-top:40px;
+  }
+
+}
+h1{
+    text-align: center;
+    margin: 42px;
+    font-size: 50px;
+    color: #f5f5f5;
+}
+/* Main section with buttons */
+main {
+    flex-grow: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.button-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+/* Button styling */
+.btn {
+    display: inline-block;
+    padding: 15px 40px;
+    font-size: 18px;
+    font-weight: bold;
+    text-align: center;
+    border-radius: 50px;
+    text-decoration: none;
+    color: white;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+}
+
+/* Login button */
+.login-btn {
+    background-color: #007bff;
+}
+
+.login-btn:hover {
+    background-color: #0056b3;
+    box-shadow: 0 4px 15px rgba(0, 91, 187, 0.4);
+}
+
+/* Register button */
+.register-btn {
+    background-color: #28a745;
+}
+
+.register-btn:hover {
+    background-color: #218838;
+    box-shadow: 0 4px 15px rgba(33, 136, 56, 0.4);
+}
+
+/* Footer styling */
+footer {
+    text-align: center;
+    padding: 15px;
+    background-color: #343a40;
+    color: white;
+}
+.logo{
+    width: 10%;
+    height: 90px; 
+}

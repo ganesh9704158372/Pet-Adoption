@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Edit Pet</title>
+</head>
+<body>
+    <h1>Edit Pet</h1>
+    <form method="post" enctype="multipart/form-data">
+        <label for="name">Name:</label>
+        <input type="text" name="name" value="{{ pet['name'] }}" required><br>
+        <label for="age">Age:</label>
+        <input type="text" name="age" value="{{ pet['age'] }}" required><br>
+        <label for="email">Email:</label>
+        <input type="text" name="email" value="{{ pet['email'] }}" required><br>
+        <label for="contact">Contact:</label>
+        <input type="text" name="contact" value="{{ pet['contact'] }}" required><br>
+        <label for="type">Type:</label>
+        <input type="text" name="type" value="{{ pet['type'] }}" required><br>
+        <label for="img">Image:</label>
+        <input type="file" name="img"><br>
+        <input type="submit" value="Update Pet">
+    </form>
+</body>
+</html>

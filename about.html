@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Abouot Page</title> 
+    <link rel="stylesheet" href="{{url_for('static', filename='css/about.css')}}">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <script defer src="https://use.fontawesome.com/releases/v5.1.0/js/all.js" integrity="sha384-3LK/3kTpDE/Pkp8gTNp2gR/2gOiwQ6QaO7Td0zV76UFJVhqLl4Vl3KL1We6q6wR9" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous" />
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+</head>
+<body>
+<div class="bg">
+    <div>
+            <h1 class="heading">About Us</h1>
+    <p class="para">
+        Welcome to PETWORLD, where our mission is to find loving homes for animals in need.<br> 
+        Founded in , we have dedicated ourselves to rescuing and rehoming pets from all walks of life.<br> 
+        Our passionate team works tirelessly to ensure every animal receives the care and attention they deserve
+    </p>
+        </div>
+    <div class="card-container">
+        <h1 class="heading2">Why You Opt For Us</h1>
+        <p class="para2">
+        <span class="span">O</span>ur mission is to provide a safe haven for homeless animals and facilitate their transition into permanent, loving homes
+            We value compassion, transparency, and dedication, and we believe that every animal deserves a chance at a happy life,
+            Our facilities are designed with the safety of our animals in mind. We have secure, spacious enclosures that meet or exceed industry standards, with proper ventilation,
+             climate control, and comfortable bedding to ensure a safe and pleasant living environment.
+        </p>
+        <img src="{{url_for('static',filename='images/about1.jpg')}}" class="image">
+    </div>
+    <div class="card-container">
+        <h1 class="heading2">How Safe We Are</h1>
+        <p class="para2">
+        <span class="span">A</span>t PETWORLD, the safety and well-being of our animals are our top priorities. 
+        We are dedicated to providing a secure and nurturing environment where every animal can thrive.
+        We have comprehensive safety policies in place, including secure access controls to our facilities, emergency evacuation plans, and protocols for reporting and addressing any concerns related to animal safety. 
+        These measures ensure that we are prepared for any situation that may arise.
+        </p>
+    </div>
+    <img src="{{url_for('static',filename='images/about2.jpg')}}" class="image">
+    <div class="card-container">
+        <h1 class="heading2">How We Handle Animals</h1>
+        <p class="para2">
+        <span class="span">O</span>ur trained staff follows strict protocols for handling animals to minimize stress and ensure their safety.
+         We use positive reinforcement techniques and ensure that all interactions are gentle and respectful.
+         All of our staff and volunteers undergo rigorous training in animal care and safety. This includes understanding animal behavior,
+          emergency response procedures, and proper handling techniques to ensure the well-being of every animal,
+          We are always happy to answer any questions you may have about our safety measures. Please feel free to contact us at <span class="span">petworld@gmail.com</span> for more information or to discuss any concerns."
+        </p>
+    </div>
+    <img src="{{url_for('static',filename='images/about3.jpg')}}" class="image">
+    <button class="button2 m-4">
+        <a href="{{url_for('home')}}">Back</a>
+    </button>
+    </div>
